@@ -20,7 +20,7 @@ BLOCKHASH_FUNC = lambda data: pack.IntType(256).unpack(__import__('dash_hash').g
 POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('dash_hash').getPoWHash(data))
 BLOCK_PERIOD = 150 # s
 SYMBOL = 'PAC'
-CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'PaccoinCore') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/PaccoinCore/') if platform.system() == 'Darwin' else os.path.expanduser('~/.paccoincore'), 'dash.conf')
+CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'PaccoinCore') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/PaccoinCore/') if platform.system() == 'Darwin' else os.path.expanduser('~/.paccoincore'), 'paccoin.conf')
 BLOCK_EXPLORER_URL_PREFIX = 'http://usa.pacblockexplorer.com:3002/block/'
 ADDRESS_EXPLORER_URL_PREFIX = 'http://usa.pacblockexplorer.com:3002/address/'
 TX_EXPLORER_URL_PREFIX = 'http://usa.pacblockexplorer.com:3002/tx/'
